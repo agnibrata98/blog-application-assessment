@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "174b7b66-bab8-4417-919c-1b799bac3d8d",
+		"name": "3rd-assessment_blog_application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40066407"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTE1ZTc3MzU5ZmE3NWY2NjMxNTYyMjgiLCJpYXQiOjE3NjMxMDQxMjMsImV4cCI6MTc2MzEwNTAyM30.sJYX6zPzLD2e9ljN-VxEw5Fm31Lsl7sSFxGsrwKrFSI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "User 2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user2@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9878455000",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "ABC Street, Kolkata",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abcd1234",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/C:/Users/Agnibrata Shee/Pictures/Screenshots/Screenshot 2024-03-30 162020.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user2@yopmail.com\",\r\n    \"password\": \"abcd1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/blogs/create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWMwNjY3OGY5NmJjNzI4NTcyYzAzNyIsImVtYWlsIjoidXNlcjFAeW9wbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc2MzQ1MDA3NywiZXhwIjoxNzYzNDUzNjc3fQ.qzBwB-UIgHD9gnH-QfdF6eVULiIwKSKPv_EdYR6SkZg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "My Second Blog of user 1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This blog explains the basics of React.js.",
+							"type": "text"
+						},
+						{
+							"key": "blogImage",
+							"type": "file",
+							"src": "/C:/Users/Agnibrata Shee/Pictures/Screenshots/Screenshot 2024-10-25 112520.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/blogs/all",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/blogs/691c188d9329cc6e06376bf6",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/691c188d9329cc6e06376bf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"691c188d9329cc6e06376bf6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/blogs/691c188d9329cc6e06376bf6",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWMxMjU3ZTNlOGFiYjMxNWM4YTE3YSIsImVtYWlsIjoidXNlcjJAeW9wbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc2MzQ1MDI0OCwiZXhwIjoxNzYzNDUzODQ4fQ.n6xznv22Ub3qNNkAH5JTYIz0G3wD5RU-C4MgayIxV0g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "My First Blog new",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This blog explains the basics of Node.js updated",
+							"type": "text"
+						},
+						{
+							"key": "blogImage",
+							"type": "file",
+							"src": "/C:/Users/Agnibrata Shee/Pictures/Screenshots/Screenshot 2024-04-19 132128.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/691c188d9329cc6e06376bf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"691c188d9329cc6e06376bf6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/blogs/691c188d9329cc6e06376bf6",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWMxMjU3ZTNlOGFiYjMxNWM4YTE3YSIsImVtYWlsIjoidXNlcjJAeW9wbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc2MzQ1MDI0OCwiZXhwIjoxNzYzNDUzODQ4fQ.n6xznv22Ub3qNNkAH5JTYIz0G3wD5RU-C4MgayIxV0g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/691c188d9329cc6e06376bf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"691c188d9329cc6e06376bf6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
